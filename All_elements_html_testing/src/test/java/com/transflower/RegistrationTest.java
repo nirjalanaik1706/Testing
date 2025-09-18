@@ -1,22 +1,20 @@
 package com.transflower;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.time.Duration;
 
 import org.junit.jupiter.api.AfterAll;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class RegistrationTest {
     private static WebDriver driver;
@@ -51,35 +49,35 @@ public class RegistrationTest {
 
         username.sendKeys("Nirjala Naik");
         try{
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         }
         catch(InterruptedException e){
             System.out.println(e);
         }
         email.sendKeys("nirjalanaik@gmail.com");
         try{
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         }
         catch(InterruptedException e){
             System.out.println(e);
         }
         password.sendKeys("nirjala@123");
         try{
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         }
         catch(InterruptedException e){
             System.out.println(e);
         }
         age.sendKeys("21");
         try{
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         }
         catch(InterruptedException e){
             System.out.println(e);
         }
         dob.sendKeys("17-06-2004");
         try{
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         }
         catch(InterruptedException e){
             System.out.println(e);
