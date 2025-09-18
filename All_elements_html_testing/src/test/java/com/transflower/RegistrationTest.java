@@ -108,7 +108,7 @@ public class RegistrationTest {
         );
         message.sendKeys("Welcome Dear "+enteredusername);
 
-        // if(enteredusername.equals("nirjala17")&&
+        // if(enteredusername.equals("Nirjala Naik")&&
         //    enteredemail.equals("nirjalanaik@gmail.com")&&
         //    enteredpassword.equals("nirjala@123")&&
         //    enteredage.equals("21")&&
