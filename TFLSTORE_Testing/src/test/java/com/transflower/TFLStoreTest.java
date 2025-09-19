@@ -1,8 +1,7 @@
 package com.transflower;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.AfterAll;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -35,6 +34,7 @@ public class TFLStoreTest {
         catch(InterruptedException e){
             System.out.println(e);
         }
+        //only one button clicked 
         // WebElement jasminbtn=driver.findElement(By.id("1"));
         // jasminbtn.click();
         // WebElement gerberabtn=driver.findElement(By.id("2"));
