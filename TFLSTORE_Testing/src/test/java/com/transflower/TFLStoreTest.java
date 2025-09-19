@@ -34,7 +34,7 @@ public class TFLStoreTest {
         catch(InterruptedException e){
             System.out.println(e);
         }
-        //only one button clicked 
+        //only one button clicked at once
         // WebElement jasminbtn=driver.findElement(By.id("1"));
         // jasminbtn.click();
         // WebElement gerberabtn=driver.findElement(By.id("2"));
