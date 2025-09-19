@@ -35,20 +35,20 @@ public class TFLStoreTest {
         catch(InterruptedException e){
             System.out.println(e);
         }
-        WebElement jasminbtn=driver.findElement(By.id("1"));
-        jasminbtn.click();
-        WebElement gerberabtn=driver.findElement(By.id("2"));
-        gerberabtn.clear();
-        WebElement carnationbtn=driver.findElement(By.id("3"));
-        carnationbtn.click();
-        WebElement lilybtn=driver.findElement(By.id("4"));
-        lilybtn.click();
-        WebElement marigoldbtn=driver.findElement(By.id("5"));
-        marigoldbtn.click();
-        WebElement lotusbtn=driver.findElement(By.id("6"));
-        lotusbtn.click();
-        WebElement dahilabtn=driver.findElement(By.id("7"));
-        dahilabtn.click();
+        // WebElement jasminbtn=driver.findElement(By.id("1"));
+        // jasminbtn.click();
+        // WebElement gerberabtn=driver.findElement(By.id("2"));
+        // gerberabtn.clear();
+        // WebElement carnationbtn=driver.findElement(By.id("3"));
+        // carnationbtn.click();
+        // WebElement lilybtn=driver.findElement(By.id("4"));
+        // lilybtn.click();
+        // WebElement marigoldbtn=driver.findElement(By.id("5"));
+        // marigoldbtn.click();
+        // WebElement lotusbtn=driver.findElement(By.id("6"));
+        // lotusbtn.click();
+        // WebElement dahilabtn=driver.findElement(By.id("7"));
+        // dahilabtn.click();
         WebElement rosebtn=driver.findElement(By.id("8"));
         rosebtn.click();
         String afterclickrose = driver.getCurrentUrl();
@@ -97,14 +97,14 @@ public class TFLStoreTest {
             System.out.println(e);
         }
         
-        WebElement removerfromcart=driver.findElement(By.id("removecart"));
-        removerfromcart.click();
-        try{
-        Thread.sleep(2000); 
-        }
-        catch(InterruptedException e){
-            System.out.println(e);
-        }
+        // WebElement removerfromcart=driver.findElement(By.id("removecart"));
+        // removerfromcart.click();
+        // try{
+        // Thread.sleep(2000); 
+        // }
+        // catch(InterruptedException e){
+        //     System.out.println(e);
+        // }
         
 
 
