@@ -31,7 +31,8 @@ public class TFLStoreTest {
          try{
         Thread.sleep(2000); 
         }
-        catch(InterruptedException e){
+        catch(InterruptedException e)
+        {
             System.out.println(e);
         }
         //only one button clicked at once
@@ -56,7 +57,8 @@ public class TFLStoreTest {
         try{
         Thread.sleep(2000); 
         }
-        catch(InterruptedException e){
+        catch(InterruptedException e)
+        {
             System.out.println(e);
         }
        
