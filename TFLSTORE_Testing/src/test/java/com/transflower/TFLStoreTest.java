@@ -76,7 +76,8 @@ public class TFLStoreTest {
         try{
         Thread.sleep(2000); 
         }
-        catch(InterruptedException e){
+        catch(InterruptedException e)
+        {
             System.out.println(e);
             }
         WebElement productquantity=driver.findElement(By.id("txtquantity"));
