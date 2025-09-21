@@ -54,7 +54,8 @@ public class TFLStoreTest {
         rosebtn.click();
         String afterclickrose = driver.getCurrentUrl();
         assertTrue(afterclickrose.contains("details.html"), afterclickrose);
-        try{
+        try
+        {
         Thread.sleep(2000); 
         }
         catch(InterruptedException e)
