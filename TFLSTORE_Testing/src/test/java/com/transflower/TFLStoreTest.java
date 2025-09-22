@@ -101,7 +101,7 @@ public class TFLStoreTest {
         catch(InterruptedException e){
             System.out.println(e);
         }
-        
+        // only one button uses at a time 
         // WebElement removerfromcart=driver.findElement(By.id("removecart"));
         // removerfromcart.click();
         // try{
