@@ -19,7 +19,7 @@ public class TFLStoreTest {
     {
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
-        driver.get("http://localhost:8000/index.html");
+        driver.get("http://localhost:8000/index.html");// run the tflstore project and get a
     }
     @Test
     void testtflstore()
