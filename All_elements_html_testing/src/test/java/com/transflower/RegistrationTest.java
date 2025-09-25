@@ -111,7 +111,7 @@ public class RegistrationTest
         catch(InterruptedException e){
             System.out.println(e);
         }
-
+        // if test then run
         // if(enteredusername.equals("Nirjala Naik")&&
         //    enteredemail.equals("nirjalanaik@gmail.com")&&
         //    enteredpassword.equals("nirjala@123")&&
