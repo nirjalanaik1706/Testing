@@ -16,7 +16,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class RegistrationTest {
+public class RegistrationTest 
+{
     private static WebDriver driver;
     private static  WebDriverWait wait;
 
