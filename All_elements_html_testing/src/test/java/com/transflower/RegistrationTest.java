@@ -102,9 +102,7 @@ public class RegistrationTest
          // String enteredaddress=address.getAttribute("Kolhapur");
 
         button.click(); 
-        WebElement welcomeMessage = wait.until(
-                ExpectedConditions.presenceOfElementLocated(By.id("msg"))
-        );
+        WebElement welcomeMessage = wait.until( ExpectedConditions.presenceOfElementLocated(By.id("msg")) );
 
         assertTrue(welcomeMessage.getText().contains("Welcome " + enteredusername + "!"));
         try{
