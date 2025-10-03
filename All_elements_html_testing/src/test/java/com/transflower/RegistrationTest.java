@@ -16,7 +16,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class RegistrationTest {
+public class RegistrationTest 
+{
     private static WebDriver driver;
     private static  WebDriverWait wait;
 
@@ -101,9 +102,7 @@ public class RegistrationTest {
          // String enteredaddress=address.getAttribute("Kolhapur");
 
         button.click(); 
-        WebElement welcomeMessage = wait.until(
-                ExpectedConditions.presenceOfElementLocated(By.id("msg"))
-        );
+        WebElement welcomeMessage = wait.until( ExpectedConditions.presenceOfElementLocated(By.id("msg")) );
 
         assertTrue(welcomeMessage.getText().contains("Welcome " + enteredusername + "!"));
         try{
@@ -112,7 +111,7 @@ public class RegistrationTest {
         catch(InterruptedException e){
             System.out.println(e);
         }
-
+        
         // if(enteredusername.equals("Nirjala Naik")&&
         //    enteredemail.equals("nirjalanaik@gmail.com")&&
         //    enteredpassword.equals("nirjala@123")&&
