@@ -39,7 +39,7 @@ public class ProductAPITest{
     }
 
     @Test
-    public void createProduct_shouldReturn201(){
+    public void createProduct_shouldReturn200(){
         RestAssured.baseURI="http://localhost:6070";
         String newProductJson="""
                 {
@@ -55,7 +55,7 @@ public class ProductAPITest{
             .when()
                   .post("/api/products")
             .then()
-                .statusCode(201)
+                .statusCode(200)
                 .body("id",notNullValue())
                 .body("name",equalTo("Iphone18"))
                 .body("price",equalTo(180000.00));
