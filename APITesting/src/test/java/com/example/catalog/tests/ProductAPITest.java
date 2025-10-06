@@ -38,7 +38,7 @@ public class ProductAPITest {
     public void createProduct_shouldReturn200() {
         String newProductJson = """
         {
-            "name": "pink Rose",
+            "name": "red Rose",
             "price": 150.0
         }
         """;
@@ -51,7 +51,7 @@ public class ProductAPITest {
         .then()
             .statusCode(200)
             .body("id", notNullValue())
-            .body("name", equalTo("pink Rose"))
+            .body("name", equalTo("red Rose"))
             .body("price", equalTo(150.0F));
     }
 
@@ -59,7 +59,7 @@ public class ProductAPITest {
    public void updateProduct_shouldReturn200() {
     String updateProductJson = """
     {
-        "id": 2,
+        "id": 4,
         "name": "rose",
         "price": 130.0
     }
@@ -69,7 +69,7 @@ public class ProductAPITest {
         .contentType(ContentType.JSON)
         .body(updateProductJson)
     .when()
-        .put("/api/products/2") 
+        .put("/api/products/5") 
     .then()
         .statusCode(200)
         .body("name", equalTo("rose"))
@@ -79,7 +79,7 @@ public class ProductAPITest {
     @Test
     public void deleteProduct_showReturn200() {
         given()
-            .when().delete("/api/products/1")
+            .when().delete("/api/products/3")
         .then().statusCode(200);
     }
 }
