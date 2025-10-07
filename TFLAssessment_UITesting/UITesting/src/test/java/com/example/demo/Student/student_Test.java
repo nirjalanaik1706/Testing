@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -55,6 +54,17 @@ public class student_Test {
         wait.until(ExpectedConditions.urlContains("Student/student.html#"));
         Assert.assertTrue(driver.getCurrentUrl().contains("Student/student.html#"),"did not get all tests");
 
-        WebElement testdetails
+        WebElement testDetails = driver.findElement(By.xpath("//button[text()='Details']"));
+        testDetails.click();
+        wait.until(ExpectedConditions.urlContains("Student/student.html#"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("Student/student.html#"),"no details load");
+
+        WebElement startBtn = driver.findElement(By.xpath("//button[@class='startBtn' and @data-id='5']"));
+        startBtn.click();
+        // wait.until(ExpectedConditions.urlContains("Student/student.html#"));
+        // Assert.assertTrue(driver.getCurrentUrl().contains("Student/student.html#"),"not working start button");
+
+
+
     }
 }
