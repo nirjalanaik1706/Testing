@@ -54,7 +54,8 @@ public class student_Test {
         wait.until(ExpectedConditions.urlContains("Student/student.html#"));
         Assert.assertTrue(driver.getCurrentUrl().contains("Student/student.html#"),"did not get all tests");
 
-        WebElement testDetails = driver.findElement(By.xpath("//button[text()='Details']"));
+        WebElement testDetails = wait.until(
+        ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(), 'Details')]")));
         testDetails.click();
         wait.until(ExpectedConditions.urlContains("Student/student.html#"));
         Assert.assertTrue(driver.getCurrentUrl().contains("Student/student.html#"),"no details load");

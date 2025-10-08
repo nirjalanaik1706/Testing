@@ -3,6 +3,7 @@ package com.example.demo.Student;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -76,9 +77,9 @@ public class SMETest {
 
         try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
 
-        WebElement DateTime = driver.findElement(By.id("scheduledDate"));
-        DateTime.sendKeys("2025-10-07T18:00");
-
+       JavascriptExecutor js = (JavascriptExecutor) driver;
+       js.executeScript("document.getElementById('scheduledDate').value = '2025-10-07T20:00';");
+       
         try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
 
         WebElement passinglevel = driver.findElement(By.id("passingLevel"));
