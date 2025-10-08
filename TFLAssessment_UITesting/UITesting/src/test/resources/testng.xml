@@ -9,7 +9,7 @@
 
     <test name="Student SME Tests">
         <classes>
-            <class name="com.example.demo.Student.SMETest"/>
+            <class name="com.example.demo.SME.SMETest"/>
         </classes>
     </test>
 

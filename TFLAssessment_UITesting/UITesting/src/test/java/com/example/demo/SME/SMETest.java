@@ -1,4 +1,4 @@
-package com.example.demo.Student;
+package com.example.demo.SME;
 
 import java.time.Duration;
 
@@ -47,45 +47,61 @@ public class SMETest {
 
         WebElement submit = driver.findElement(By.cssSelector("button[type='submit']"));
         submit.click();
-
         wait.until(ExpectedConditions.urlContains("/SME/sme.html"));
         Assert.assertTrue(driver.getCurrentUrl().contains("/SME/sme.html"));
 
         WebElement createTest = driver.findElement(By.id("createTestLink"));
         createTest.click();
-
         wait.until(ExpectedConditions.urlContains("/SME/sme.html"));
         Assert.assertTrue(driver.getCurrentUrl().contains("/SME/sme.html"));
 
         WebElement TestName = driver.findElement(By.id("testName"));
         TestName.sendKeys("ADVANCED JAVA");
-
         WebElement Duration = driver.findElement(By.id("duration"));
         Duration.sendKeys("00:40:00");
 
-        try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
+        try { 
+            Thread.sleep(2000); 
+        } catch (InterruptedException e) {
+             e.printStackTrace();
+             }
 
         WebElement Subject = driver.findElement(By.id("subjectSelect"));
         Select subject = new Select(Subject);
         subject.selectByVisibleText("ADVJAVA");
 
-        try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
-
+        try { 
+            Thread.sleep(2000); 
+        } catch (InterruptedException e) {
+             e.printStackTrace();
+             }
         WebElement SME = driver.findElement(By.id("smeSelect"));
         Select sme = new Select(SME);
         sme.selectByVisibleText("sahil kamble");
 
-        try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
+       try { 
+            Thread.sleep(2000); 
+        } catch (InterruptedException e) {
+             e.printStackTrace();
+             }
 
        JavascriptExecutor js = (JavascriptExecutor) driver;
        js.executeScript("document.getElementById('scheduledDate').value = '2025-10-07T20:00';");
-       
-        try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
+
+        try { 
+            Thread.sleep(2000); 
+        } catch (InterruptedException e) {
+             e.printStackTrace();
+             }
 
         WebElement passinglevel = driver.findElement(By.id("passingLevel"));
         passinglevel.sendKeys("2");
 
-        try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
+        try { 
+            Thread.sleep(2000); 
+        } catch (InterruptedException e) {
+             e.printStackTrace();
+             }
 
         WebElement que1 = driver.findElement(By.cssSelector("input[value='6']"));
         que1.click();
@@ -101,33 +117,33 @@ public class SMETest {
         try { Thread.sleep(2000); 
         }
          catch (InterruptedException e) {
-           e.printStackTrace(); }
+           e.printStackTrace(); 
+        }
 
         WebElement createtest = driver.findElement(By.id("submitBtn"));
         createtest.click();
-
-   
         wait.until(ExpectedConditions.urlContains("/SME/reviewtest.html"));
         Assert.assertTrue(driver.getCurrentUrl().contains("/SME/reviewtest.html"), "Review Test page not loaded");
 
         WebElement confirmandcreate = driver.findElement(By.id("confirmBtn"));
         confirmandcreate.click();
+        wait.until(ExpectedConditions.urlContains("SME/sme.html?msg=Test%20Created%20Successfully"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("SME/sme.html?msg=Test%20Created%20Successfully"));
 
-        // wait.until(ExpectedConditions.urlContains("/SME/sme.html"));
-        // Assert.assertTrue(driver.getCurrentUrl().contains("/SME/sme.html"));
+        wait.until(ExpectedConditions.urlContains("/SME/sme.html"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("/SME/sme.html"));
+        WebElement GetQuestionAndcriteria = driver.findElement(By.id("checkQuestionAsPerCriteria"));
+        GetQuestionAndcriteria.click();
 
-        // WebElement GetQuestionAndcriteria = driver.findElement(By.id("checkQuestionAsPerCriteria"));
-        // GetQuestionAndcriteria.click();
+        wait.until(ExpectedConditions.urlContains("SME/sme.html?msg=Test%20Created%20Successfully"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("SME/sme.html?msg=Test%20Created%20Successfully"));
 
-        // wait.until(ExpectedConditions.urlContains("SME/sme.html?msg=Test%20Created%20Successfully"));
-        // Assert.assertTrue(driver.getCurrentUrl().contains("SME/sme.html?msg=Test%20Created%20Successfully"));
+        WebElement selectSubject = driver.findElement(By.id("ddlSubjects"));
+        Select subject1 = new Select(selectSubject);
+        subject1.selectByVisibleText("COREJAVA");
 
-        // WebElement selectSubject = driver.findElement(By.id("ddlSubjects"));
-        // Select subject1 = new Select(selectSubject);
-        // subject1.selectByVisibleText("COREJAVA");
-
-        // WebElement selectEvaCriteria = driver.findElement(By.id("ddlCriteria"));
-        // Select evacriteria = new Select(selectEvaCriteria);
-        // evacriteria.selectByVisibleText("OOPS");
+        WebElement selectEvaCriteria = driver.findElement(By.id("ddlCriteria"));
+        Select evacriteria = new Select(selectEvaCriteria);
+        evacriteria.selectByVisibleText("OOPS");
     }
 }
