@@ -1,16 +1,23 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="StudentUITestSuite" verbose="1">
+    <test name="Student SME Tests">
+        <classes>
+            <class name="com.example.demo.SME.SMETest"/>
+        </classes>
+    </test>
 
+    <test name="Student admin Tests">
+        <classes>
+            <class name="com.example.demo.Admin.adminTest"/>
+        </classes>
+    </test>
+    
     <test name="Student UI Tests">
         <classes>
             <class name="com.example.demo.Student.student_Test"/>
         </classes>
     </test>
 
-    <test name="Student SME Tests">
-        <classes>
-            <class name="com.example.demo.SME.SMETest"/>
-        </classes>
-    </test>
+    
 
 </suite>

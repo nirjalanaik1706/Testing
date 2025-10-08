@@ -29,7 +29,7 @@ public class SMETest {
     }
 
     @Test
-    public void loginTest() {
+    public void loginsme() {
         driver.get("http://127.0.0.1:5500/Home.html");
 
         WebElement login = driver.findElement(By.linkText("Login"));
