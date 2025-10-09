@@ -16,7 +16,6 @@
     <artifactId>statuscodeplayground</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>StatusCodePlayground</name>
-    <description>Demo project for HTTP Status Code Playground using Spring Boot and Cucumber BDD</description>
     <packaging>jar</packaging>
 
     <properties>
