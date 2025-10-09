@@ -43,7 +43,7 @@ public class tatusController {
     public ResponseEntity<Map<String, String>> forbidden() {
         return ResponseEntity
                 .status(HttpStatus.FORBIDDEN)
-                .body(Map.of("error", "You are not allowed here (403 Forbidden)"));
+                .body(Map.of("error", "You are not allowed here(403 Forbidden)"));
     }
 
     @GetMapping("/notfound")
