@@ -1,13 +1,15 @@
 package com.example.catalog.tests;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.*;
-
-import java.util.List;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 public class ProductUITest {
 
@@ -28,6 +30,6 @@ public class ProductUITest {
 
     @AfterClass
     public void teardown() {
-        // driver.quit();
+        driver.quit();
     }
 }
