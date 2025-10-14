@@ -1,45 +1,38 @@
 package com.transflower.statuscodeplayground.stepdefs;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.server.LocalServerPort;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.client.RestTemplate;
-
-import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import io.restassured.response.Response;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class StatusStepDefinitions {
 
-    @LocalServerPort
-    private int port;
+    private Response response;
 
-    private ResponseEntity<String> response;
-
-    private final RestTemplate restTemplate = new RestTemplate();
+    @Given("the Product API is available")
+    public void the_product_api_is_available() {
+        RestAssured.baseURI = "http://localhost:8080";
+    }
 
     @When("I send GET request to {string}")
     public void iSendGetRequestTo(String path) {
-        String url = "http://localhost:" + port + path;
-        response = restTemplate.getForEntity(url, String.class);
+        response = given().when().get(path);
     }
 
     @When("I send POST request to {string}")
     public void iSendPostRequestTo(String path) {
-        String url = "http://localhost:" + port + path;
-        response = restTemplate.postForEntity(url, null, String.class);
+        response = given().when().post(path);
     }
 
     @Then("the response status should be {int}")
-    public void theResponseStatusShouldBe(int expectedStatus) {
-        assertEquals(expectedStatus, response.getStatusCodeValue());
+    public void theResponseStatusShouldBe(int statusCode) {
+        response.then().statusCode(statusCode);
     }
 
-    @And("the response should contain {string}")
+    @Then("the response should contain {string}")
     public void theResponseShouldContain(String expectedText) {
-        assertTrue(response.getBody().toLowerCase().contains(expectedText.toLowerCase()));
+        response.then().body(org.hamcrest.Matchers.containsString(expectedText));
     }
 }

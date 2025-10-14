@@ -43,20 +43,20 @@ public class statusController {
     public ResponseEntity<Map<String, String>> forbidden() {
         return ResponseEntity
                 .status(HttpStatus.FORBIDDEN)
-                .body(Map.of("error", "You are not allowed here(403 Forbidden)"));
+                .body(Map.of("error", "You are not allowed here (403 Forbidden)"));
     }
 
     @GetMapping("/notfound")
     public ResponseEntity<Map<String, String>> notFound() {
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)
-                .body(Map.of("error", "Resource not found(404 Not Found)"));
+                .body(Map.of("error", "Resource not found (404 Not Found)"));
     }
 
     @GetMapping("/servererror")
     public ResponseEntity<Map<String, String>> serverError() {
         try {
-            int result = 10 / 0; 
+            int result = 10 / 0; // Force a crash
             return ResponseEntity.ok(Map.of("result", String.valueOf(result)));
         } catch (Exception ex) {
             return ResponseEntity
