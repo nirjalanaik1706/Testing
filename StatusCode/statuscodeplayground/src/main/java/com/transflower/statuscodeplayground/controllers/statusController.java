@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/status")
-public class tatusController {
+public class statusController {
 
     @GetMapping("/ok")
     public ResponseEntity<Map<String, String>> ok() {
