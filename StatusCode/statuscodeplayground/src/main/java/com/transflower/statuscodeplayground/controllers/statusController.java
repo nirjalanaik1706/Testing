@@ -56,7 +56,7 @@ public class statusController {
     @GetMapping("/servererror")
     public ResponseEntity<Map<String, String>> serverError() {
         try {
-            int result = 10 / 0; // Force a crash
+            int result = 10 / 0; 
             return ResponseEntity.ok(Map.of("result", String.valueOf(result)));
         } catch (Exception ex) {
             return ResponseEntity
