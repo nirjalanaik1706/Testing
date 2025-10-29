@@ -1,5 +1,6 @@
 package com.example.maths.repository;
 
-public interface MathRepository {
+public interface MathRepository
+ {
     int getNumber();
 }
