@@ -118,4 +118,6 @@ public class AssessmentAPITest {
         .body("[0].id",equalTo(1))
         .body("[0].title",equalTo("COREJAVA"));
     }
+
+    @Test
 }
