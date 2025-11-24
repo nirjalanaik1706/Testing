@@ -121,6 +121,11 @@ public class AssessmentAPITest {
 
     @Test
     public void getEvalutionCriterias(){
+        given()
+        .when()
+        .get("api/assessment/criterias")
+        .then()
+        .statusCode(200)
         
     }
 }
