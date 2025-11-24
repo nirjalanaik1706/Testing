@@ -126,6 +126,8 @@ public class AssessmentAPITest {
         .get("api/assessment/criterias")
         .then()
         .statusCode(200)
-        
+        .body("[0].id",equalTo(1))
+        .body("[0].title",equalTo("OOPS"))
+        .body("[0].subjectId",equalTo(1));
     }
 }
