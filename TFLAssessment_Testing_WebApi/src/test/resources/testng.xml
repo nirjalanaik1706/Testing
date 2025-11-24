@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="ProductCatalogSuite" verbose="1">
+
+    <test name="AssessmentIntelligenceAPI Tests">
+        <classes>
+           <class name="com.example.Assessment.tests.AssessmentIntelligenceAPITest"/>
+        </classes>
+    </test>
+    <test name="AssessmentAPI">
+        <classes>
+            <class name="com.example.Assessment.tests.AssessmentAPITest"/>
+        </classes>
+        </test>
+
+</suite>
