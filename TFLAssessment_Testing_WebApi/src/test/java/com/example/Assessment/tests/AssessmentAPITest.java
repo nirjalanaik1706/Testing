@@ -120,5 +120,7 @@ public class AssessmentAPITest {
     }
 
     @Test
-    public void etEvalutionCriterias()
+    public void getEvalutionCriterias(){
+        
+    }
 }
