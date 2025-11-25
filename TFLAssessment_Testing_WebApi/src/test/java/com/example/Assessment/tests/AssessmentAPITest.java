@@ -168,6 +168,49 @@ public class AssessmentAPITest {
 
     @Test
     public void CreateTest(){
-        given 
+        String requestBody="""
+        {
+        "subjectId": 6,
+        "name": "Java Basics",
+        "duration": "00:30:00",
+        "subjectExpertId": 4,
+        "creationDate": "2025-11-25T05:58:55",
+        "modificationDate": "2025-11-25T05:58:55",
+        "scheduledDate": "2025-11-25T11:28:00",
+        "passingLevel": 0
+        }
+        """;
+        given()
+        .header("Content-Type", "application/json")
+        .body(requestBody)
+        .when()
+        .post("/api/Assessment/createtest")
+        .then()
+        .statusCode(200)
+        .body("message", equalTo("Test created successfully"));
     }
+
+    @Test
+    public void AddQuestion(){
+        given()
+        .header("Content-Type", "application/json")
+        .when()
+        .post("api/Assessment/addquestion/assessments/1/questions/10")
+        .then()
+        .statusCode(200)
+        .body(equalTo("true"));
+    }
+
+    @Test
+    public void AddQuestions(){
+        given()
+        .header("Content-Type", "application/json")
+        .when()
+        .post("/api/Assessment/addmultiplequestions/assessments/9")
+        .then()
+        .statusCode(200)
+        .body(equalTo("false"));
+    }
+
+    @Test
 }
