@@ -294,6 +294,39 @@ public class AssessmentAPITest {
 
     @Test 
     public void GetAllQuestionsBySubject(){
-        
+        given()
+        .when()
+        .get("/api/Assessment/allquestionsbysubject/6")
+        .then()
+        .statusCode(200)
+        .body("[0].questionBankId",equalTo(25))
+        .body("[0].title",equalTo("Which of the following tool is used to manage the GAC in .NET Framework?"))
+        .body("[0].a",equalTo( "RegSvr.exe "))
+        .body("[0].b",equalTo("GacUtil.exe"))
+        .body("[0].c",equalTo("GacSvr32.exe"))
+        .body("[0].d",equalTo("GacMgr.exe"));
+    }
+
+    @Test 
+    public void GetSmeBySubject(){
+        given()
+        .when()
+        .get("/api/Assessment/getsme/1")
+        .then()
+        .body("[0].id",equalTo(1))
+        .body("[0].userId",equalTo(1))
+        .body("[0].firstName",equalTo("ravi"))
+        .body("[0].lastName",equalTo("tambade"))
+        .body("[0].email",equalTo("ravi.tambade@example.com"))
+        .body("[0].contact",equalTo("9000000000"))
+        .body("[0].role",nullValue());
+    }
+
+    @Test
+    public void GetAllTests()
+    {
+        // given()
+        // .when()
+        // .get("/api/Assessment/getalltest/from/2024-01-01/to/2024-12-31")
     }
 }
