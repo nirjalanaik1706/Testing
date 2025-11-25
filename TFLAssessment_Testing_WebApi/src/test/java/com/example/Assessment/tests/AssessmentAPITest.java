@@ -1,7 +1,10 @@
 package com.example.Assessment.tests;
 
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.nullValue;
 import org.testng.annotations.Test;
+
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.given;
 
@@ -11,7 +14,7 @@ public class AssessmentAPITest {
         RestAssured.baseURI = "http://localhost:5238";
     }
 
-    String token =  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjMiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJuaXJqYWxhLm5haWtAZXhhbXBsZS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsic21lIiwic3R1ZGVudCJdLCJleHAiOjE3NjM5OTA2MDQsImlzcyI6IkFzc2Vzc21lbnRBUEkiLCJhdWQiOiJBc3Nlc3NtZW50QVBJIn0.A_mmMu7ttn1aAsd5lrppZi4YuRFLU37JNg5JTN8Tcvs";
+    String token =  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJyYXZpLnRhbWJhZGVAZXhhbXBsZS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImV4cCI6MTc2NDA1OTE2MSwiaXNzIjoiQXNzZXNzbWVudEFQSSIsImF1ZCI6IkFzc2Vzc21lbnRBUEkifQ.SVL4mkSOYpj1wuh7yKGxAUjIi6UpzE10rZA40t89z40";
 
     @Test
     public void GetDetails(){
@@ -33,20 +36,20 @@ public class AssessmentAPITest {
     public void GetAll(){
         given()
         .when()
-            .get("/api/assessment/creationdate/fromDate/2025-08-13/toDate/2025-08-14")
+            .get("/api/assessment/creationdate/fromDate/2025-11-25/toDate/2025-11-26")
         .then()
             .statusCode(200)
             .body("size()", greaterThan(0))
             .body("[1].id", equalTo(10))
-            .body("[1].subjectId", equalTo(1))
+            .body("[1].testName",nullValue())
+            .body("[1].subjectId", equalTo(6))
             .body("[1].duration", equalTo("00:00:00"))
-            .body("[1].subjectExpertId", equalTo(1))
+            .body("[1].subjectExpertId", equalTo(4))
             .body("[1].creationDate", equalTo("0001-01-01T00:00:00"))
-            .body("[1].modificationDate", equalTo("2025-08-13T10:55:36"))
-            .body("[1].scheduledDate", equalTo("2025-08-13T16:30:00"))
-            .body("[1].status", equalTo("1"))
+            .body("[1].modificationDate", equalTo("2025-11-25T05:58:55"))
+            .body("[1].scheduledDate", equalTo("2025-11-25T11:28:00"))
+            .body("[1].status", equalTo("6"))
             .body("[1].passingLevel", equalTo(0))
-            .body("[1].testName", nullValue())
             .body("[1].subject", nullValue())
             .body("[1].firstName", nullValue())
             .body("[1].lastName", nullValue());
@@ -120,14 +123,51 @@ public class AssessmentAPITest {
     }
 
     @Test
-    public void getEvalutionCriterias(){
+    public void getConcept(){
         given()
         .when()
-        .get("api/assessment/criterias")
+        .get("api/assessment/concepts")
         .then()
         .statusCode(200)
         .body("[0].id",equalTo(1))
         .body("[0].title",equalTo("OOPS"))
         .body("[0].subjectId",equalTo(1));
+    }
+    @Test
+    public void  GetConceptsBySubject(){
+        given()
+        .when()
+        .get("/api/assessment/concepts/subjects/1")
+        .then()
+        .statusCode(200)
+        .body("[0].id",equalTo(1))
+        .body("[0].title",equalTo("OOPS"))
+        .body("[0].subjectId",equalTo(1));
+    }
+    @Test
+    public void GetAllBySubjectMatterExpert()
+    {
+        given()
+        .when()
+        .get("/api/assessment/subjectexperts/4")
+        .then()
+        .body("[0].id",equalTo(10))
+        .body("[0].testName",nullValue())
+        .body("[0].subjectId",equalTo(6))
+        .body("[0].duration",equalTo("00:30:00"))
+        .body("[0].subjectExpertId",equalTo(0))
+        .body("[0].creationDate",equalTo("2025-11-25T05:58:55"))
+        .body("[0].modificationDate",equalTo("2025-11-25T05:58:55"))
+        .body("[0].scheduledDate",equalTo("2025-11-25T11:28:00"))
+        .body("[0].status",equalTo( "created"))
+        .body("[0].passingLevel",equalTo(0))
+        .body("[0].subject",nullValue())
+        .body("[0].firstName",nullValue())
+        .body("[0].lastName",nullValue());
+    }
+
+    @Test
+    public void CreateTest(){
+        given 
     }
 }
