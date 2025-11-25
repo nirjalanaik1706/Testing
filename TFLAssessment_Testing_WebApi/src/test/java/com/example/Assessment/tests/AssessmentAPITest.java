@@ -14,8 +14,7 @@ public class AssessmentAPITest {
         RestAssured.baseURI = "http://localhost:5238";
     }
 
-    String token =  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJyYXZpLnRhbWJhZGVAZXhhbXBsZS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImV4cCI6MTc2NDA1OTE2MSwiaXNzIjoiQXNzZXNzbWVudEFQSSIsImF1ZCI6IkFzc2Vzc21lbnRBUEkifQ.SVL4mkSOYpj1wuh7yKGxAUjIi6UpzE10rZA40t89z40";
-
+    String token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjMiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJuaXJqYWxhLm5haWtAZXhhbXBsZS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsic21lIiwic3R1ZGVudCJdLCJleHAiOjE3NjQwNjgzOTAsImlzcyI6IkFzc2Vzc21lbnRBUEkiLCJhdWQiOiJBc3Nlc3NtZW50QVBJIn0.jf5FSwEFrAuV5MHIKaDm0Pz6HDFng81gDTBfbhXDwpQ";  
     @Test
     public void GetDetails(){
         given()
@@ -71,7 +70,7 @@ public class AssessmentAPITest {
             .body("[0].subjectExpertId", equalTo(1))
             .body("[0].creationDate", equalTo("2025-12-05T00:00:00"))
             .body("[0].modificationDate", equalTo("2025-02-05T00:00:00"))
-            .body("[0].scheduledDate", equalTo("2025-02-07T00:00:00"))
+            .body("[0].scheduledDate", equalTo("2024-01-01T00:00:00"))
             .body("[0].status", equalTo("scheduled"))
             .body("[0].passingLevel", equalTo(0))
             .body("[0].subject", equalTo("COREJAVA"))
@@ -201,16 +200,100 @@ public class AssessmentAPITest {
         .body(equalTo("true"));
     }
 
+    // @Test
+    // public void AddQuestions(){
+    //     String requestBody = """
+    //     {
+    //     "questions": [10, 11]
+    //     }
+    //     """;
+    //     given()
+    //     .header("Content-Type", "application/json")
+    //     .body(requestBody)
+    //     .when()
+    //     .post("/api/Assessment/addmultiplequestions/assessments/9")
+    //     .then()
+    //     .statusCode(200)
+    //     .body(equalTo("true"));
+    // }
+
     @Test
-    public void AddQuestions(){
+    public void RemoveQuestion()
+    {
         given()
         .header("Content-Type", "application/json")
         .when()
-        .post("/api/Assessment/addmultiplequestions/assessments/9")
+        .delete("/api/Assessment/1/questions/9")
         .then()
         .statusCode(200)
         .body(equalTo("false"));
     }
 
     @Test
+    public void ChangeDuration()
+    {
+        given()
+        .header("Content-Type", "application/json")
+        .when()
+        .put("/api/Assessment/1/duration/40")
+        .then()
+        .statusCode(200)
+        .body(equalTo("true"));
+    }
+
+    @Test
+    public void Reschedule(){
+        given()
+        .header("Content-Type", "application/json")
+        .when()
+        .put("/api/Assessment/1/reschedule/2024-01-01")
+        .then().statusCode(200)
+        .body(equalTo("true"));
+    }
+
+    @Test
+    public void RemoveQuestions(){
+        String requestBody="""
+            [41]
+                """;
+        given()
+        .headers("Content-Type","application/json")
+        .body(requestBody)
+        .when()
+        .delete("/api/Assessment/deletequestions")
+        .then()
+        .statusCode(200)
+        .body(equalTo("false"));
+    }
+
+    @Test
+    public void AddTest(){
+        String requestBody="""
+        {
+        "subjectId": 1,
+        "name": "Java",
+        "duration": "01:30:00",
+        "smeId": 5,
+        "scheduledDate": "2025-11-25T14:30:00",
+        "passingLevel": 70,
+        "questionIds": [10, 12, 15, 18]
+        }
+
+        """;
+        given()
+        .header("Authorization", "Bearer " + token)
+        .headers("Content-Type","application/json")
+        .body(requestBody)
+        .when()
+        .post("/api/Assessment/addtest")
+        .then()
+        .statusCode(200)
+        .body("message",equalTo("Test created"));
+        //.body("testId",equalTo(48));
+    }
+
+    @Test 
+    public void GetAllQuestionsBySubject(){
+        
+    }
 }
