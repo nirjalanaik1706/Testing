@@ -326,7 +326,14 @@ public class AssessmentAPITest {
     public void GetAllTests()
     {
         // given()
+        // .header("Authorization", "Bearer " + token)
         // .when()
-        // .get("/api/Assessment/getalltest/from/2024-01-01/to/2024-12-31")
+        // .get("/api/Assessment/getalltest/from/2025-11-25/to/2025-11-25")
+        // .then()
+        // .statusCode(200)
+        // .body
+
+
+
     }
 }
