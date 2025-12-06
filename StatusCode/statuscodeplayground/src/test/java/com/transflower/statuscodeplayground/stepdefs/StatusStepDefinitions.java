@@ -12,22 +12,26 @@ public class StatusStepDefinitions {
     private Response response;
 
     @Given("the Product API is available")
-    public void the_product_api_is_available() {
+    public void the_product_api_is_available() 
+    {
         RestAssured.baseURI = "http://localhost:8080";
     }
 
     @When("I send GET request to {string}")
-    public void iSendGetRequestTo(String path) {
+    public void iSendGetRequestTo(String path) 
+    {
         response = given().when().get(path);
     }
 
     @When("I send POST request to {string}")
-    public void iSendPostRequestTo(String path) {
+    public void iSendPostRequestTo(String path) 
+    {
         response = given().when().post(path);
     }
 
     @Then("the response status should be {int}")
-    public void theResponseStatusShouldBe(int statusCode) {
+    public void theResponseStatusShouldBe(int statusCode) 
+    {
         response.then().statusCode(statusCode);
     }
 
