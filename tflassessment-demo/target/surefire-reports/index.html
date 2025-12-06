@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-ProductCatalogSuite" class="navigator-link">
+              <span class="suite-name border-passed">ProductCatalogSuite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-ProductCatalogSuite" class="navigator-link ">
+                    <span>D:\TAP\GITHUB\Java_Programming\tflassessment-demo\src\test\resources\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-ProductCatalogSuite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-ProductCatalogSuite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-ProductCatalogSuite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-ProductCatalogSuite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-ProductCatalogSuite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-ProductCatalogSuite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">11 methods,   11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-ProductCatalogSuite" class="hide-methods passed suite-ProductCatalogSuite"> (hide)</a> <!-- hide-methods passed suite-ProductCatalogSuite -->
+                      <a href="#" panel-name="suite-ProductCatalogSuite" class="show-methods passed suite-ProductCatalogSuite"> (show)</a> <!-- show-methods passed suite-ProductCatalogSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-ProductCatalogSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProductCatalogSuite" title="com.transflower.tflassessment.QuestionBankAPITest" class="method navigator-link" hash-for-method="GetAllQuestions">GetAllQuestions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProductCatalogSuite" title="com.transflower.tflassessment.QuestionBankAPITest" class="method navigator-link" hash-for-method="GetConcept">GetConcept</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProductCatalogSuite" title="com.transflower.tflassessment.QuestionBankAPITest" class="method navigator-link" hash-for-method="GetQuestion">GetQuestion</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProductCatalogSuite" title="com.transflower.tflassessment.QuestionBankAPITest" class="method navigator-link" hash-for-method="GetQuestions">GetQuestions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProductCatalogSuite" title="com.transflower.tflassessment.QuestionBankAPITest" class="method navigator-link" hash-for-method="GetQuestionsBySubjectAndConcept">GetQuestionsBySubjectAndConcept</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProductCatalogSuite" title="com.transflower.tflassessment.QuestionBankAPITest" class="method navigator-link" hash-for-method="GetQuestionsBySubjects">GetQuestionsBySubjects</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProductCatalogSuite" title="com.transflower.tflassessment.QuestionBankAPITest" class="method navigator-link" hash-for-method="GetQuestionsWithSubjectAndConcept">GetQuestionsWithSubjectAndConcept</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProductCatalogSuite" title="com.transflower.tflassessment.QuestionBankAPITest" class="method navigator-link" hash-for-method="GetSubjectQuestionCount">GetSubjectQuestionCount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProductCatalogSuite" title="com.transflower.tflassessment.QuestionBankAPITest" class="method navigator-link" hash-for-method="InsertQuestion">InsertQuestion</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProductCatalogSuite" title="com.transflower.tflassessment.QuestionBankAPITest" class="method navigator-link" hash-for-method="UpdateAnswer">UpdateAnswer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProductCatalogSuite" title="com.transflower.tflassessment.QuestionBankAPITest" class="method navigator-link" hash-for-method="UpdateQuestionOptions">UpdateQuestionOptions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-ProductCatalogSuite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-ProductCatalogSuite" class="panel ProductCatalogSuite">
+          <div class="suite-ProductCatalogSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.transflower.tflassessment.QuestionBankAPITest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="GetAllQuestions">
+                  </a> <!-- GetAllQuestions -->
+                  <span class="method-name">GetAllQuestions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="GetConcept">
+                  </a> <!-- GetConcept -->
+                  <span class="method-name">GetConcept</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="GetQuestion">
+                  </a> <!-- GetQuestion -->
+                  <span class="method-name">GetQuestion</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="GetQuestions">
+                  </a> <!-- GetQuestions -->
+                  <span class="method-name">GetQuestions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="GetQuestionsBySubjectAndConcept">
+                  </a> <!-- GetQuestionsBySubjectAndConcept -->
+                  <span class="method-name">GetQuestionsBySubjectAndConcept</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="GetQuestionsBySubjects">
+                  </a> <!-- GetQuestionsBySubjects -->
+                  <span class="method-name">GetQuestionsBySubjects</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="GetQuestionsWithSubjectAndConcept">
+                  </a> <!-- GetQuestionsWithSubjectAndConcept -->
+                  <span class="method-name">GetQuestionsWithSubjectAndConcept</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="GetSubjectQuestionCount">
+                  </a> <!-- GetSubjectQuestionCount -->
+                  <span class="method-name">GetSubjectQuestionCount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="InsertQuestion">
+                  </a> <!-- InsertQuestion -->
+                  <span class="method-name">InsertQuestion</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="UpdateAnswer">
+                  </a> <!-- UpdateAnswer -->
+                  <span class="method-name">UpdateAnswer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="UpdateQuestionOptions">
+                  </a> <!-- UpdateQuestionOptions -->
+                  <span class="method-name">UpdateQuestionOptions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ProductCatalogSuite-class-passed -->
+        </div> <!-- panel ProductCatalogSuite -->
+        <div panel-name="test-xml-ProductCatalogSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\TAP\GITHUB\Java_Programming\tflassessment-demo\src\test\resources\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;ProductCatalogSuite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;QuestionBankAPITest&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.transflower.tflassessment.QuestionBankAPITest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- QuestionBankAPITest --&gt;
+&lt;/suite&gt; &lt;!-- ProductCatalogSuite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-ProductCatalogSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for ProductCatalogSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">QuestionBankAPITest (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-ProductCatalogSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for ProductCatalogSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-ProductCatalogSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for ProductCatalogSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_ProductCatalogSuite');
+function tableData_ProductCatalogSuite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(11);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'GetAllQuestions')
+data.setCell(0, 2, 'com.transflower.tflassessment.QuestionBankAPITest')
+data.setCell(0, 3, 5822);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'InsertQuestion')
+data.setCell(1, 2, 'com.transflower.tflassessment.QuestionBankAPITest')
+data.setCell(1, 3, 2076);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'GetQuestions')
+data.setCell(2, 2, 'com.transflower.tflassessment.QuestionBankAPITest')
+data.setCell(2, 3, 272);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'GetQuestion')
+data.setCell(3, 2, 'com.transflower.tflassessment.QuestionBankAPITest')
+data.setCell(3, 3, 220);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'GetQuestionsWithSubjectAndConcept')
+data.setCell(4, 2, 'com.transflower.tflassessment.QuestionBankAPITest')
+data.setCell(4, 3, 139);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'GetQuestionsBySubjectAndConcept')
+data.setCell(5, 2, 'com.transflower.tflassessment.QuestionBankAPITest')
+data.setCell(5, 3, 119);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'GetQuestionsBySubjects')
+data.setCell(6, 2, 'com.transflower.tflassessment.QuestionBankAPITest')
+data.setCell(6, 3, 90);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'GetSubjectQuestionCount')
+data.setCell(7, 2, 'com.transflower.tflassessment.QuestionBankAPITest')
+data.setCell(7, 3, 73);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'GetConcept')
+data.setCell(8, 2, 'com.transflower.tflassessment.QuestionBankAPITest')
+data.setCell(8, 3, 44);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'UpdateQuestionOptions')
+data.setCell(9, 2, 'com.transflower.tflassessment.QuestionBankAPITest')
+data.setCell(9, 3, 44);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'UpdateAnswer')
+data.setCell(10, 2, 'com.transflower.tflassessment.QuestionBankAPITest')
+data.setCell(10, 3, 25);
+window.suiteTableData['ProductCatalogSuite']= { tableData: data, tableDiv: 'times-div-ProductCatalogSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <div id="times-div-ProductCatalogSuite">
+              </div> <!-- times-div-ProductCatalogSuite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-ProductCatalogSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for ProductCatalogSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-ProductCatalogSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-ProductCatalogSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.transflower.tflassessment.QuestionBankAPITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">GetAllQuestions</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">GetConcept</span>
+                <span class="method-start">5826 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">GetQuestion</span>
+                <span class="method-start">5872 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">GetQuestions</span>
+                <span class="method-start">6096 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">GetQuestionsBySubjectAndConcept</span>
+                <span class="method-start">6372 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">GetQuestionsBySubjects</span>
+                <span class="method-start">6522 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">GetQuestionsWithSubjectAndConcept</span>
+                <span class="method-start">6612 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">GetSubjectQuestionCount</span>
+                <span class="method-start">6753 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">InsertQuestion</span>
+                <span class="method-start">6836 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">UpdateAnswer</span>
+                <span class="method-start">8916 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">UpdateQuestionOptions</span>
+                <span class="method-start">8941 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

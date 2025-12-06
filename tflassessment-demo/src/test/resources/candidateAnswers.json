@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "candidateId": 17,
+    "testQuestionId": 16,
+    "answerKey": "B"
+  },
+  {
+    "id": 2,
+    "candidateId": 18,
+    "testQuestionId": 17,
+    "answerKey": "A"
+  }
+   {
+    "id": 3,
+    "candidateId": 19,
+    "testQuestionId": 20,
+    "answerKey": "A"
+   }
+   {
+    "id": 4,
+    "candidateId": 21,
+    "testQuestionId": 22,
+    "answerKey": "C"
+  }
+   {
+    "id": 4,
+    "candidateId": 23,
+    "testQuestionId": 24,
+    "answerKey": "D"
+  }
+]

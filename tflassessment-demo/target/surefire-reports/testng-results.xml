@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-11-28T19:07:47 IST" name="ProductCatalogSuite" finished-at="2025-11-28T19:07:56 IST" duration-ms="9060">
+    <groups>
+    </groups>
+    <test started-at="2025-11-28T19:07:47 IST" name="QuestionBankAPITest" finished-at="2025-11-28T19:07:56 IST" duration-ms="9060">
+      <class name="com.transflower.tflassessment.QuestionBankAPITest">
+        <test-method signature="GetAllQuestions()[pri:0, instance:com.transflower.tflassessment.QuestionBankAPITest@413f69cc]" started-at="2025-11-28T19:07:47 IST" name="GetAllQuestions" finished-at="2025-11-28T19:07:53 IST" duration-ms="5822" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetAllQuestions -->
+        <test-method signature="GetConcept()[pri:0, instance:com.transflower.tflassessment.QuestionBankAPITest@413f69cc]" started-at="2025-11-28T19:07:53 IST" name="GetConcept" finished-at="2025-11-28T19:07:53 IST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetConcept -->
+        <test-method signature="GetQuestion()[pri:0, instance:com.transflower.tflassessment.QuestionBankAPITest@413f69cc]" started-at="2025-11-28T19:07:53 IST" name="GetQuestion" finished-at="2025-11-28T19:07:53 IST" duration-ms="220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetQuestion -->
+        <test-method signature="GetQuestions()[pri:0, instance:com.transflower.tflassessment.QuestionBankAPITest@413f69cc]" started-at="2025-11-28T19:07:53 IST" name="GetQuestions" finished-at="2025-11-28T19:07:54 IST" duration-ms="272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetQuestions -->
+        <test-method signature="GetQuestionsBySubjectAndConcept()[pri:0, instance:com.transflower.tflassessment.QuestionBankAPITest@413f69cc]" started-at="2025-11-28T19:07:54 IST" name="GetQuestionsBySubjectAndConcept" finished-at="2025-11-28T19:07:54 IST" duration-ms="119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetQuestionsBySubjectAndConcept -->
+        <test-method signature="GetQuestionsBySubjects()[pri:0, instance:com.transflower.tflassessment.QuestionBankAPITest@413f69cc]" started-at="2025-11-28T19:07:54 IST" name="GetQuestionsBySubjects" finished-at="2025-11-28T19:07:54 IST" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetQuestionsBySubjects -->
+        <test-method signature="GetQuestionsWithSubjectAndConcept()[pri:0, instance:com.transflower.tflassessment.QuestionBankAPITest@413f69cc]" started-at="2025-11-28T19:07:54 IST" name="GetQuestionsWithSubjectAndConcept" finished-at="2025-11-28T19:07:54 IST" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetQuestionsWithSubjectAndConcept -->
+        <test-method signature="GetSubjectQuestionCount()[pri:0, instance:com.transflower.tflassessment.QuestionBankAPITest@413f69cc]" started-at="2025-11-28T19:07:54 IST" name="GetSubjectQuestionCount" finished-at="2025-11-28T19:07:54 IST" duration-ms="73" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetSubjectQuestionCount -->
+        <test-method signature="InsertQuestion()[pri:0, instance:com.transflower.tflassessment.QuestionBankAPITest@413f69cc]" started-at="2025-11-28T19:07:54 IST" name="InsertQuestion" finished-at="2025-11-28T19:07:56 IST" duration-ms="2076" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InsertQuestion -->
+        <test-method signature="UpdateAnswer()[pri:0, instance:com.transflower.tflassessment.QuestionBankAPITest@413f69cc]" started-at="2025-11-28T19:07:56 IST" name="UpdateAnswer" finished-at="2025-11-28T19:07:56 IST" duration-ms="25" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdateAnswer -->
+        <test-method signature="UpdateQuestionOptions()[pri:0, instance:com.transflower.tflassessment.QuestionBankAPITest@413f69cc]" started-at="2025-11-28T19:07:56 IST" name="UpdateQuestionOptions" finished-at="2025-11-28T19:07:56 IST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdateQuestionOptions -->
+      </class> <!-- com.transflower.tflassessment.QuestionBankAPITest -->
+    </test> <!-- QuestionBankAPITest -->
+  </suite> <!-- ProductCatalogSuite -->
+</testng-results>
