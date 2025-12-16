@@ -12,5 +12,10 @@
             <class name="com.example.catalog.tests.ProductUITest"/>
         </classes>
     </test>
+    <test name="UI Tests">
+        <classes>
+            <class name="com.example.catalog.tests.ProductUITest"/>
+        </classes>
+    </test>
 
 </suite>
