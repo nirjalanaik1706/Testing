@@ -29,7 +29,6 @@ public class CalculatorServiceTest {
         // Act
         int result = calculatorService.doubleNumber();
 
-        // Assert
         assertEquals(result, 10);
 
         // Verify that getNumber() was called exactly once
